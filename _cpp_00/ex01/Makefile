@@ -6,13 +6,13 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 17:22:59 by abdait-m          #+#    #+#              #
-#    Updated: 2021/10/20 17:54:52 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/10/20 18:25:03 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
-SRCS = megaphone.cpp
+SRCS = .cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
