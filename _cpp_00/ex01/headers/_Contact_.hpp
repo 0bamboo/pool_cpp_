@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _main_.cpp                                         :+:      :+:    :+:   */
+/*   _Contact_.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 14:15:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/22 16:18:02 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/10/22 16:06:12 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/10/22 16:22:40 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/_phonebook_.hpp"
+#ifndef _CONTACT_
 
+# define _CONTACT_
 
-// the commands :  ADD SEARCH EXIT .
+#include "_phonebook_.hpp"
 
-// max conatact to store is 8
-// the ninth contact is replaced the oldest
-// ADD : 
-//		first_name, last_name, nickname, phone_number, darkest_secret
+class _Contact_{
+	
+	public:
+		std::string	_first_name_;
+		std::string	_last_name_;
+		std::string	_nickname_;
+		std::string	_darkest_secret_;
+		int			_phone_nbr_;
 
-int	main(int argc, char **argv)
-{
-	_Contact_ insta;
+		int _func_(int a);
+};
 
-	insta._first_name_ = "hello";
-	std::cout << insta._first_name_;
-}
+#endif
