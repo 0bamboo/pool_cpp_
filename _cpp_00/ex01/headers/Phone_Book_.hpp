@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _Contact_.cpp                                      :+:      :+:    :+:   */
+/*   _Phone_Book_.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 16:05:57 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/22 16:21:43 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/10/22 16:06:49 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/10/23 14:57:38 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/_phonebook_.hpp"
+#ifndef PHONE_BOOK_
 
-int _Contact_::_func_(int a)
-{
-	a = 6;
-	return (a);
-}
+# define PHONE_BOOK_
+
+#include "_phonebook_.hpp"
+
+class Phone_Book_{
+	
+};
+
+#endif
