@@ -26,10 +26,10 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(HEADERS)
 	@$(CPP) $(OBJS) -o $@
+	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
 %.o: %.cpp
 	@$(CPP) $(CPPFLAGS) -o $@ -c $<
-	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
 clean:
 	@rm -f $(OBJS)

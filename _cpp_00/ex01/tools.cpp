@@ -44,7 +44,7 @@ std::string	_fix_width_(std::string str)
 {
 	std::string _ret;
 
-	_ret = str.erase(9, str.length() - 11);
+	_ret = str.erase(MAX_WIDTH - 1, str.length() - MAX_WIDTH + 1);
 	_ret.append(".");
 	return (_ret);
 }
@@ -86,16 +86,19 @@ void	_search_(Contact_ PhoneBook[])
 		_copy = PhoneBook[index]._get_first_name_();
 		_check = _copy.length() > MAX_WIDTH ? _fix_width_(_copy) : \
 			_copy;
+		std::cout << _check;
 
 		std::cout<< "|" << std::setw(MAX_WIDTH);
-		_copy = PhoneBook[index]._get_first_name_();
+		_copy = PhoneBook[index]._get_last_name_();
 		_check = _copy.length() > MAX_WIDTH ? _fix_width_(_copy) : \
 			_copy;
+		std::cout << _check;
 
 		std::cout<< "|" << std::setw(MAX_WIDTH);
-		_copy = PhoneBook[index]._get_first_name_();
+		_copy = PhoneBook[index]._get_nickname_();
 		_check = _copy.length() > MAX_WIDTH ? _fix_width_(_copy) : \
 			_copy;
+		std::cout << _check;
 		std::cout<< "|" << std::endl;
 	}
 	_print_contact_(PhoneBook, index);
