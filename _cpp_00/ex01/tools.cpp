@@ -3,8 +3,13 @@
 void	_menu_(int& count)
 {
 	count = 0;
-	std::cout << " ------- WELCOME -------" << std::endl;
-	std::cout << "|----- WELCOME -------" << std::endl;
+	std::cout << " ------------------------------------ " << std::endl;
+	std::cout << "| Welcome to the Phonebook Programm  |" << std::endl;
+	std::cout << "|         Usable commands :          |" << std::endl;
+	std::cout << "|             1 -> ADD               |" << std::endl;
+	std::cout << "|             2 -> SEARCH            |" << std::endl;
+	std::cout << "|             3 -> EXIT              |" << std::endl;
+	std::cout << " ------------------------------------ " << std::endl;
 }
 
 Contact_	_add_contact_(void)
