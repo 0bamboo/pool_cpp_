@@ -14,9 +14,17 @@
 
 # define _PHONEBOOK_H
 
-#include <iostream>
-#include <cstring>
-#include "Contact_.hpp"
-#include "Phone_Book_.hpp"
+# include <iostream>
+# include <iomanip>
+# include <cstring>
+# include "Contact_.hpp"
+# define MAX_C 8
+# define MAX_WIDTH 10
+
+Contact_	_add_contact_(void);
+std::string	_fix_width_(std::string str);
+void		_search_(Contact_ PhoneBook[]);
+void		_print_contact_(Contact_ PhoneBook[], int index);
+void		_menu_(int& count);
 
 #endif

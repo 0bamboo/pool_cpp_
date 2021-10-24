@@ -18,14 +18,26 @@
 
 class Contact_{
 	
-	public:
+	private:
 		std::string	_first_name_;
 		std::string	_last_name_;
 		std::string	_nickname_;
 		std::string	_darkest_secret_;
-		int			_phone_nbr_;
+		std::string _phone_nbr_;
 
-		int _func_(int a);
+	public:
+		Contact_(void);
+		void		_set_first_name_(std::string _fname_);
+		void		_set_last_name_(std::string _lname_);
+		void		_set_nickname_(std::string _nickname_);
+		void		_set_darkest_secret_(std::string _darkest_secret_);
+		void		_set_phone_nbr_(std::string _phone_nbr_);
+		std::string	_get_first_name_(void);
+		std::string	_get_last_name_(void);
+		std::string	_get_nickname_(void);
+		std::string	_get_darkest_secret_(void);
+		std::string	_get_phone_nbr_(void);
+		~Contact_(void);
 };
 
 #endif

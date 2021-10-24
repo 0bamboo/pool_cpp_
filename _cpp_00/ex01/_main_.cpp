@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "headers/_phonebook_.hpp"
+#include "headers/Contact_.hpp"
 
 
 // the commands :  ADD SEARCH EXIT .
@@ -19,27 +20,29 @@
 // the ninth contact is replaced the oldest
 // ADD : 
 //		first_name, last_name, nickname, phone_number, darkest_secret
-void reference(int& a)
-{
-	a++;
-}
 
-int	main(int argc, char **argv)
+
+
+int	main()
 {
-	Phone_Book_ phone_book;
-	Contact_ new_c;
+	Contact_ PhoneBook[MAX_C];
 	std::string	command;
+	int count;
 	
-	while (1)
+	_menu_(count);
+	while (true)
 	{
 		std::cout << "> ";
 		std::cin >> command;
 		if (command == "ADD")
-			std::cout << "ADD" << std::endl;
+		{
+			if (count > 7)
+				count = 0;
+			PhoneBook[count++] = _add_contact_();
+		}
 		else if (command == "SEARCH")
-			std::cout << "SEARCH" << std::endl;
+			_search_(PhoneBook);
 		else if (command == "EXIT")
 			break ;
-		std::cout << command << std::endl;
 	}
 }

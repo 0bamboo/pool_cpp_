@@ -12,9 +12,11 @@
 
 NAME = phonebook
 
-SRCS = .cpp
+SRCS = Contact_.cpp tools.cpp _main_.cpp
 
 OBJS = $(SRCS:.cpp=.o)
+
+HEADERS = ./headers/_phonebook_.hpp ./headers/Contact_.hpp
 
 CPP = g++
 
@@ -22,7 +24,7 @@ CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADERS)
 	@$(CPP) $(OBJS) -o $@
 
 %.o: %.cpp
