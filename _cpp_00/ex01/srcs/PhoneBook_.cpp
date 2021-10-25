@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:36:23 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/25 20:14:03 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/25 20:47:57 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,10 @@ void PhoneBook_::_print_contact_(int index)
 
 	std::cout << "Enter The Index > ";
 	std::getline(std::cin, ind);
-	_ind = std::stoi(ind);
-	// check for the index if it is a number?????
+	if (ind[0] >= '0' && ind[0] <= '9')
+		_ind = std::stoi(ind);
+	else
+		_ind = -1;
 	if (_ind < index && _ind >= 0)
 	{
 		std::cout << "First Name     : " << this->PhoneBook[_ind]._get_first_name_() << std::endl;
