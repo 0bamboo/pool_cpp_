@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tools.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/25 17:39:27 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/10/25 17:39:27 by abdait-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "headers/_phonebook_.hpp"
 
 void	_menu_(int& count)
@@ -18,23 +30,23 @@ Contact_	_add_contact_(void)
 	std::string _input_;
 
 	std::cout << "Enter First Name > ";
-	std::cin >> _input_;
+	std::getline(std::cin, _input_);
 	new_c._set_first_name_(_input_);
 
 	std::cout << "Enter Last Name > ";
-	std::cin >> _input_;
+	std::getline(std::cin, _input_);
 	new_c._set_last_name_(_input_);
 
 	std::cout << "Enter NickName > ";
-	std::cin >> _input_;
+	std::getline(std::cin, _input_);
 	new_c._set_nickname_(_input_);
 
 	std::cout << "Enter Darkest Secret > ";
-	std::cin >> _input_;
+	std::getline(std::cin, _input_);
 	new_c._set_darkest_secret_(_input_);
 
 	std::cout << "Enter Phone Number > ";
-	std::cin >> _input_;
+	std::getline(std::cin, _input_);
 	new_c._set_phone_nbr_(_input_);
 
 	return (new_c);
@@ -64,9 +76,7 @@ void	_print_contact_(Contact_ PhoneBook[], int index)
 		std::cout << "Phone Number   : "<< PhoneBook[_ind]._get_phone_nbr_() << std::endl;
 	}
 	else
-	{
 		std::cout << "----- Wrong Index . -----" << std::endl;
-	}
 }
 
 void	_search_(Contact_ PhoneBook[])
