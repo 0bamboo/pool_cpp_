@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:16:50 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/23 14:58:24 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/25 19:37:17 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <iomanip>
 # include <cstring>
 # include "Contact_.hpp"
+# include "PhoneBook_.hpp"
 # define MAX_C 8
 # define MAX_WIDTH 10
 
