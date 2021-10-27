@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:36:23 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/27 17:59:00 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/27 18:07:18 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,13 @@ PhoneBook_::~PhoneBook_() { return; }
 
 void PhoneBook_::_set_ph_contact_(int index)
 {
-	std::cout << index << std::endl;
 	this->PhoneBook[index] = _add_contact_();
 }
 
 void PhoneBook_::_menu_(void)
 {
 	std::cout << " ------------------------------------ " << std::endl;
-	std::cout << "| Welcome to the Phonebook Programm  |" << std::endl;
+	std::cout << "| Welcome to the Phonebook Program  |" << std::endl;
 	std::cout << "|         Usable commands :          |" << std::endl;
 	std::cout << "|             1 -> ADD               |" << std::endl;
 	std::cout << "|             2 -> SEARCH            |" << std::endl;
