@@ -6,18 +6,23 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:36:23 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/25 20:47:57 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/27 17:59:00 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/_phonebook_.hpp"
 
-PhoneBook_::PhoneBook_() { return; }
+PhoneBook_::PhoneBook_() 
+{
+	this->count = 0; 
+	return;
+}
 
 PhoneBook_::~PhoneBook_() { return; }
 
 void PhoneBook_::_set_ph_contact_(int index)
 {
+	std::cout << index << std::endl;
 	this->PhoneBook[index] = _add_contact_();
 }
 
@@ -57,6 +62,8 @@ Contact_ PhoneBook_::_add_contact_(void)
 	std::getline(std::cin, _input_);
 	new_c._set_phone_nbr_(_input_);
 
+	this->count++;
+
 	return (new_c);
 }
 
@@ -76,7 +83,7 @@ void PhoneBook_::_print_contact_(int index)
 
 	std::cout << "Enter The Index > ";
 	std::getline(std::cin, ind);
-	if (ind[0] >= '0' && ind[0] <= '9')
+	if (ind[0] >= '0' && ind[0] <= '9' && ind.length() == 1)
 		_ind = std::stoi(ind);
 	else
 		_ind = -1;
@@ -100,7 +107,7 @@ void PhoneBook_::_search_(void)
 
 	std::cout << "|     Index|First Name| Last Name| Nickname |" << std::endl;
 	index = -1;
-	while (++index < MAX_C)
+	while (++index < this->count)
 	{
 		std::cout << "|" << std::setw(MAX_WIDTH);
 		std::cout << index;

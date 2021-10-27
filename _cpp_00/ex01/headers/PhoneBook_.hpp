@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:27:08 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/25 20:02:32 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/27 17:57:39 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class PhoneBook_{
 
 	private:
 		Contact_		PhoneBook[MAX_C];
+		int				count;
 		
 
 	public:
