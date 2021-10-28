@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 19:36:23 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/27 18:07:18 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/28 16:32:46 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,9 @@ Contact_ PhoneBook_::_add_contact_(void)
 	std::cout << "Enter Phone Number > ";
 	std::getline(std::cin, _input_);
 	new_c._set_phone_nbr_(_input_);
-
+	
+	if (this->count >= 7)
+		this->count = 7; 
 	this->count++;
 
 	return (new_c);
