@@ -6,17 +6,17 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 17:22:59 by abdait-m          #+#    #+#              #
-#    Updated: 2021/10/25 20:13:09 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/10/28 17:52:52 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = Account
 
-SRCS = ./srcs/Contact_.cpp ./srcs/PhoneBook_.cpp _main_.cpp
+SRCS = Account.cpp tests.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADERS = ./headers/_phonebook_.hpp ./headers/Contact_.hpp ./headers/PhoneBook_.hpp
+HEADERS = ./Account.hpp
 
 CPP = clang++
 
