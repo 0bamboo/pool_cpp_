@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:59:56 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/10/28 17:59:57 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/10/29 21:33:45 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int		Account::_nbAccounts = 0;
 int		Account::_totalAmount = 0;
 int		Account::_totalNbDeposits = 0;
 int		Account::_totalNbWithdrawals = 0;
-
 int		Account::getNbAccounts(void){ return _nbAccounts; }
 int		Account::getTotalAmount(void){ return _totalAmount; }
 int		Account::getNbDeposits(void){ return _totalNbDeposits; }
@@ -28,6 +27,7 @@ int		Account::getNbWithdrawals(void){ return _totalNbWithdrawals; }
 Account::Account(int initial_deposit)
 {
 	_displayTimestamp();
+	
 	this->_accountIndex = _nbAccounts;
 	this->_amount = initial_deposit;
 	this->_nbDeposits = 0;
@@ -54,7 +54,9 @@ void	Account::makeDeposit(int deposit)
 	_totalNbDeposits += this->_nbDeposits;
 	this->_amount += deposit;
 	_totalAmount += deposit;
+	
 	_displayTimestamp();
+	
 	std::cout << "index:" << this->_accountIndex << ";p_amount:" << p_amount
 	<< ";deposit:" << deposit << ";amount:" << this->_amount
 	<< ";nb_deposits:" << this->_nbDeposits << std::endl;
@@ -63,6 +65,7 @@ void	Account::makeDeposit(int deposit)
 bool	Account::makeWithdrawal(int withdrawal)
 {
 	int		p_amount = this->_amount;
+	
 	if (withdrawal <= this->_amount)
 	{
 		_displayTimestamp();
@@ -87,7 +90,7 @@ void	Account::displayStatus(void) const
 {
 	_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount
-	<< ";desposits:" << this->_nbDeposits << ";withdrawals:" << this->_nbWithdrawals
+	<< ";deposits:" << this->_nbDeposits << ";withdrawals:" << this->_nbWithdrawals
 	<< std::endl;
 }
 
