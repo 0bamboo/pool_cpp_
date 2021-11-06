@@ -18,7 +18,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 HDR = Zombie.hpp
 
-CPP = g++
+CPP = clang++
 
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
@@ -26,10 +26,10 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(HDR)
 	@$(CPP) $(OBJS) -o $@
+	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
 %.o: %.cpp
 	@$(CPP) $(CPPFLAGS) -o $@ -c $<
-	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
 clean:
 	@rm -f $(OBJS)
