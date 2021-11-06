@@ -12,13 +12,13 @@
 
 NAME = zombie
 
-SRCS = ./main.cpp ./Zombie.cpp ./randomChump.cpp ./newZombie.cpp
+SRCS = ./main.cpp ./Weapon.cpp ./HumanA.cpp ./HumanB.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = Zombie.hpp
+HDR = ./Weapon.hpp ./HumanB.hpp ./HumanA.hpp
 
-CPP = g++
+CPP = clang++
 
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
@@ -26,10 +26,10 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(HDR)
 	@$(CPP) $(OBJS) -o $@
+	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
 %.o: %.cpp
 	@$(CPP) $(CPPFLAGS) -o $@ -c $<
-	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
 clean:
 	@rm -f $(OBJS)
