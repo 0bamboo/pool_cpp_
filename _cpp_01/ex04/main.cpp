@@ -15,15 +15,25 @@
 
 void _error_msg_()
 {
-	std::cout << "Wrong arguments ." << std::endl;
+	std::cout << "Wrong arguments or empty arguments ." << std::endl;
 	std::cout << "First arg  : [FILENAME]" << std::endl;
 	std::cout << "Second arg : [String 1]" << std::endl;
 	std::cout << "Third arg  : [String 2]" << std::endl;
 }
 
-std::string _change_occurence_(std::string line)
+int	_check_empty_str_(char **argv)
 {
-	return line;
+	std::string	arg;
+	int i;
+
+	i = 0;
+	while (++i < 4)
+	{
+		arg = argv[i];
+		if (arg.length() == 0)
+			return (1)
+	}
+	return (0);
 }
 
 void	_replace_function_(char **argv)
@@ -31,40 +41,47 @@ void	_replace_function_(char **argv)
 	std::string		str_1;
 	std::string		str_2;
 	std::string		file_name;
-	std::ofstream	fout;
-	std::ifstream	fin;
+	std::ofstream	writef;
+	std::ifstream	readf;
 	std::string		line;
-	std::ofstream	result;
-	std::fstream	file;
-
-	// file.open("file_name", std::ios::out | std::ios::in);
-	// file.open("file_name", std::ios::in);
+	int				check;
 
 	file_name = argv[1];
 	str_1 = argv[2];
 	str_2 = argv[3];
-	fout.open(file_name);
-	while (std::getline(std::cin, line))
+	readf.open(file_name, std::ios::in);
+	if (!readf)
 	{
-		if (line == "-1")
-			break;
-		fout << line << std::endl;
+		std::cout << "No file with this name !" << std::endl;
+		return ;
 	}
-	fout.close();
-	fin.open(file_name);
-	result.open(file_name + ".replace");
-	while(std::getline(fin, line))
+	writef.open(file_name + ".replace");
+	while (std::getline(writef, line))
 	{
-		line = _change_occurence_(line);
-		result << line << std::endl;
+		check = 0;
+		if (!readf.eof())
+			line.append("\n");
+		while (1)
+		{
+			check = line.find(str_1, check);
+			if (check == -1)
+				break ;
+			line.erase(check, str_1.length());
+			line.insert(check, str_2);
+			check = check + 1;
+		}
+		writef << line;
+		if (readf.eof())
+			break ;
 	}
-	result.close();
-	fin.close();
+	readf.close();
+	writef.close();
 }
+
 
 int main(int argc, char **argv)
 {
-	if (argc != 4)
+	if (argc != 4 || _check_empty_str_(argv))
 		_error_msg_();
 	else
 		_replace_function_(argv);
