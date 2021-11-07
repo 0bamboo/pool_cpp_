@@ -6,11 +6,11 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 14:43:31 by abdait-m          #+#    #+#              #
-#    Updated: 2021/10/31 14:48:46 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/11/07 13:19:58 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = attack
 
 SRCS = ./main.cpp ./Weapon.cpp ./HumanA.cpp ./HumanB.cpp
 
