@@ -53,7 +53,7 @@ void _replace_function_(char **argv)
 	if (!readf)
 	{
 		std::cout << "No file with this name !" << std::endl;
-		return;
+		return ;
 	}
 	writef.open(file_name + ".replace");
 	while (std::getline(readf, line))
