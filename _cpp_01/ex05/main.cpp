@@ -1,18 +1,23 @@
 #include "Karen.hpp"
- 
-int main()  
-{
-  Karen w;
-  std::string karenLevels[4] = { "DEBUG", "INFO", "WARNING", "ERROR"};
 
-  for(int i = 0; i < 4 ; i++)
-  {
-    w.complain(karenLevels[i]);
-  }
-  std::cout << std::endl;
-  for(int i = 3; i >= 0 ; i--)
-  {
-    w.complain(karenLevels[i]);
-  }
-  return 0;  
+int main()
+{
+	Karen karen;
+	std::string karen_comments[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int	i = -1;
+
+	while (++i < 4)
+		karen.complain(karen_comments[i]);
+
+	std::cout << std::endl;
+	std::cout << "DEBUG :" << std::endl;
+	karen.complain("DEBUG");
+	std::cout << "ERROR :" << std::endl;
+	karen.complain("ERROR");
+	std::cout << "WARNING :" << std::endl;
+	karen.complain("WARNING");
+	std::cout << "INFO :" << std::endl;
+	karen.complain("DEBUG");
+
+	return (0);
 }

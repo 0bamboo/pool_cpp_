@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:57:10 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/07 15:24:35 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:55:03 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void _error_msg_()
 	std::cout << "Third arg  : [String 2]" << std::endl;
 }
 
-int	_check_empty_str_(char **argv)
+int _check_empty_str_(char **argv)
 {
-	std::string	arg;
+	std::string arg;
 	int i;
 
 	i = 0;
@@ -31,20 +31,20 @@ int	_check_empty_str_(char **argv)
 	{
 		arg = argv[i];
 		if (arg.length() == 0)
-			return (1)
+			return (1);
 	}
 	return (0);
 }
 
-void	_replace_function_(char **argv)
+void _replace_function_(char **argv)
 {
-	std::string		str_1;
-	std::string		str_2;
-	std::string		file_name;
-	std::ofstream	writef;
-	std::ifstream	readf;
-	std::string		line;
-	int				check;
+	std::string str_1;
+	std::string str_2;
+	std::string file_name;
+	std::ofstream writef;
+	std::ifstream readf;
+	std::string line;
+	int check;
 
 	file_name = argv[1];
 	str_1 = argv[2];
@@ -53,10 +53,10 @@ void	_replace_function_(char **argv)
 	if (!readf)
 	{
 		std::cout << "No file with this name !" << std::endl;
-		return ;
+		return;
 	}
 	writef.open(file_name + ".replace");
-	while (std::getline(writef, line))
+	while (std::getline(readf, line))
 	{
 		check = 0;
 		if (!readf.eof())
@@ -65,19 +65,18 @@ void	_replace_function_(char **argv)
 		{
 			check = line.find(str_1, check);
 			if (check == -1)
-				break ;
+				break;
 			line.erase(check, str_1.length());
 			line.insert(check, str_2);
 			check = check + 1;
 		}
 		writef << line;
 		if (readf.eof())
-			break ;
+			break;
 	}
 	readf.close();
 	writef.close();
 }
-
 
 int main(int argc, char **argv)
 {

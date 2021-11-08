@@ -6,17 +6,17 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 14:43:31 by abdait-m          #+#    #+#              #
-#    Updated: 2021/10/31 14:48:57 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/11/08 14:26:04 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = karenFilter
 
-SRCS = ./main.cpp ./Zombie.cpp ./randomChump.cpp ./newZombie.cpp
+SRCS = ./main.cpp ./Karen.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = Zombie.hpp
+HDR = Karen.hpp
 
 CPP = g++
 
