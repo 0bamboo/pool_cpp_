@@ -15,12 +15,11 @@
 int main()
 {
 	int num = 20;
+    int i = -1;
     Zombie *zombies = zombieHorde(num, "Zombie_nbr_");
 
-    for (int i = 0; i < num ; i++)
-	{
+    while (++i < num)
         zombies[i].announce();
-	}
 
     delete [] zombies;
 }

@@ -15,11 +15,10 @@
 Zombie	*zombieHorde(int N, std::string name)
 {
 	Zombie *zombies = new Zombie[N];
+	int	i = -1;
     
-    for(int i = 0; i < N ; i++)
-	{
+    while (++i < N)
         zombies[i]._set_(name + std::to_string(i));
- 	}
     return zombies;
 }
 	
