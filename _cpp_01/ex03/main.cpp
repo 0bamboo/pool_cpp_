@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <iostream>
 #include "Weapon.hpp"
 #include "HumanA.hpp"

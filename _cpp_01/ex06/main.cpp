@@ -19,7 +19,10 @@ int main(int argc, char **argv)
 	}
 	comments = argv[1];
 	if ((addr = std::find(levels, levels + 4, comments)) != (levels + 4))
+	{
+		std::cout << "[ "<< levels[addr - levels] << " ]" << std::endl;
 		karen.complain(levels[addr - levels]);
+	}
 	else
 		_other_comments_();
 	return (0);

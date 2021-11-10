@@ -6,7 +6,7 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 14:43:31 by abdait-m          #+#    #+#              #
-#    Updated: 2021/10/31 14:48:34 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/11/10 14:09:37 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ HDR = Zombie.hpp
 
 CPP = clang++
 
-CPPFLAGS = -std=c++11 -Wall -Wextra -Werror
+CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 

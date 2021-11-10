@@ -18,7 +18,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 HDR = Karen.hpp
 
-CPP = g++
+CPP = clang++
 
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 

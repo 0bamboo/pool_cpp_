@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:57:10 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/08 12:55:03 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:08:32 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,14 @@ void _replace_function_(char **argv)
 		{
 			check = line.find(str_1, check);
 			if (check == -1)
-				break;
+				break ;
 			line.erase(check, str_1.length());
 			line.insert(check, str_2);
 			check = check + 1;
 		}
 		writef << line;
 		if (readf.eof())
-			break;
+			break ;
 	}
 	readf.close();
 	writef.close();

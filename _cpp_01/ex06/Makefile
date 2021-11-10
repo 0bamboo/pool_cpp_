@@ -6,7 +6,7 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 14:43:31 by abdait-m          #+#    #+#              #
-#    Updated: 2021/11/08 14:26:04 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/11/10 14:12:01 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 HDR = Karen.hpp
 
-CPP = g++
+CPP = clang++
 
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
