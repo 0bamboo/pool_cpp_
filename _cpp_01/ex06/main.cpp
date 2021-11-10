@@ -18,12 +18,25 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	comments = argv[1];
-	if ((addr = std::find(levels, levels + 4, comments)) != (levels + 4))
+	addr = std::find(levels, levels + 4, comments);
+	switch (addr - levels)
 	{
-		std::cout << "[ "<< levels[addr - levels] << " ]" << std::endl;
-		karen.complain(levels[addr - levels]);
+		case 0:
+			std::cout << "[ "<< levels[0] << " ]" << std::endl;
+			karen.complain(levels[addr - levels]);
+		case 1:
+			std::cout << "[ "<< levels[1] << " ]" << std::endl;
+			karen.complain(levels[addr - levels]);
+		case 2:
+			std::cout << "[ "<< levels[2] << " ]" << std::endl;
+			karen.complain(levels[addr - levels]);
+		case 3:
+			std::cout << "[ "<< levels[3] << " ]" << std::endl;
+			karen.complain(levels[addr - levels]);
+			break ;
+		default:
+			_other_comments_();
+			break;
 	}
-	else
-		_other_comments_();
 	return (0);
 }

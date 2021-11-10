@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:57:10 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/10 14:08:32 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:16:34 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void _replace_function_(char **argv)
 				break ;
 			line.erase(check, str_1.length());
 			line.insert(check, str_2);
-			check = check + 1;
+			check = check + str_2.length();
 		}
 		writef << line;
 		if (readf.eof())

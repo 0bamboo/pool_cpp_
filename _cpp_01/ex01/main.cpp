@@ -20,5 +20,8 @@ int main()
 
     while (++i < num)
         zombies[i].announce();
-    delete [] zombies;
+    i = -1;
+    while (++i < num)
+        zombies[i].~Zombie();
+    operator delete(zombies);
 }

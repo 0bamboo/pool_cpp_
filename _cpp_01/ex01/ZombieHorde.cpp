@@ -14,11 +14,11 @@
 
 Zombie	*zombieHorde(int N, std::string name)
 {
-	Zombie *zombies = new Zombie[N];
+	Zombie *zombies = (Zombie*) ::operator new (sizeof(Zombie) * N);
 	int	i = -1;
     
     while (++i < N)
-        zombies[i]._set_(name + std::to_string(i));
+        new (&zombies[i]) Zombie(name + std::to_string(i));
     return zombies;
 }
 	
