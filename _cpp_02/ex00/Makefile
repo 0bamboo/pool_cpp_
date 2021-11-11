@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = karen
+NAME = Fixed
 
 SRCS = ./main.cpp ./Fixed.cpp
 
@@ -24,11 +24,11 @@ CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(HDR)
+$(NAME): $(OBJS)
 	@$(CPP) $(OBJS) -o $@
 	@echo "\n\033[35mExecutable file has been created .\033[0m\n"
 
-%.o: %.cpp
+%.o: %.cpp $(HDR)
 	@$(CPP) $(CPPFLAGS) -o $@ -c $<
 
 clean:
