@@ -12,11 +12,11 @@
 
 NAME = karen
 
-SRCS = ./main.cpp ./Karen.cpp 
+SRCS = ./main.cpp ./Fixed.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = Karen.hpp
+HDR = Fixed.hpp
 
 CPP = clang++
 
