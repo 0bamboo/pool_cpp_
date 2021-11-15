@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = Point
 
-SRCS = ./main.cpp ./Fixed.cpp
+SRCS = ./main.cpp ./Fixed.cpp ./Point.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = Fixed.hpp
+HDR = Fixed.hpp Point.hpp
 
 CPP = clang++
 

@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:50:16 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/14 17:40:31 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:03:43 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,38 @@
 
 Fixed::Fixed():value(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int val)
 {
 	this->value = val * (1 << this->nbr_frac_bits);
-	std::cout << "Int constructor called" << std::endl;
+	// std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float val)
 {
 	this->value = roundf((float)val * (float)(1 << this->nbr_frac_bits));
-	std::cout << "Float constructor called" << std::endl;
+	// std::cout << "Float constructor called" << std::endl;
 }
 
+Fixed  &Fixed::operator=(const Fixed & copy)
+{
+	// std::cout << "Assignation operator called" << std::endl;
+	if (this != &copy)
+		this->value = copy.value;
+	return *this;
+}
 
 Fixed::Fixed(const Fixed& copy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	// std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
 }
 
 int	Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	// std::cout << "getRawBits member function called" << std::endl;
 	return 0;
 }
 
@@ -58,22 +65,7 @@ float	Fixed::toFloat( void ) const
 	return ((float)this->value / (float)(1 << this->nbr_frac_bits));
 }
 
-Fixed  &Fixed::operator=(const Fixed & copy)
-{
-	std::cout << "Assignation operator called" << std::endl;
-	if (this != &copy)
-		this->value = copy.value;
-	return *this;
-}
-
-std::ostream & operator<<(std::ostream & c_out, Fixed const & obj)
-{
-	c_out << obj.toFloat();
-	return c_out;
-}
-
-
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 }
