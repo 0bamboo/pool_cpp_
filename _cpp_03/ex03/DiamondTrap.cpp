@@ -1,6 +1,6 @@
 # include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap():FragTrap()
+DiamondTrap::DiamondTrap()
 {
 	this->_name_ = "unknown";
 	this->_HitPoints_ = FragTrap::_HitPoints_;
@@ -9,7 +9,7 @@ DiamondTrap::DiamondTrap():FragTrap()
 	std::cout << "\033[1;33mThe default constructor of DiamondTrap is called .\033[0;37m" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name):FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name)
 {
 	this->_name_ = name;
 	this->_HitPoints_ = FragTrap::_HitPoints_;
