@@ -12,5 +12,6 @@ int main()
 	std::cout << "-------------------" << std::endl;
 
 	last.whoAmI();
+	last.attack("user2");
 	return (0);
 }

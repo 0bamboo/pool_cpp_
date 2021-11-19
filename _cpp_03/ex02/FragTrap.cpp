@@ -18,18 +18,15 @@ FragTrap::FragTrap(std::string name):ClapTrap(name)
 	std::cout << "\033[1;33mThe constructor with parameter of FragTrap is called .\033[0;37m" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const& copy)
+FragTrap::FragTrap(FragTrap const& copy):ClapTrap(copy)
 {
-	*this = copy;
 	std::cout << "\033[1;33mThe copy constructor of FragTrap is called .\033[0;37m" << std::endl;
 }
 
 FragTrap&	FragTrap::operator=(FragTrap const& copy)
 {
-	this->_name_ = copy._name_;
-	this->_HitPoints_ = copy._HitPoints_;
-	this->_EnergyPoints_ = copy._EnergyPoints_;
-	this->_AttackDamage_ = copy._AttackDamage_;
+	if (this != &copy)
+		ClapTrap::operator=(copy);
 	std::cout << "\033[1;33mThe copy assignement operator of FragTrap is called .\033[0;37m" << std::endl;
 	return (*this);
 }

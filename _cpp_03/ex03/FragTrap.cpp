@@ -51,7 +51,7 @@ void	FragTrap::beRepaired(unsigned int amount)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout <<  "\033[1;36m HIGH FIVE ." << std::endl;
+	std::cout <<  "\033[1;36m HIGH FIVE FragTrap ." << std::endl;
 }
 
 FragTrap::~FragTrap()

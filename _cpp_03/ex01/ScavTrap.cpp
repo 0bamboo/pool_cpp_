@@ -18,18 +18,15 @@ ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 	std::cout << "\033[1;33mThe constructor with parameter of ScavTrap is called .\033[0;37m" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const& copy)
+ScavTrap::ScavTrap(ScavTrap const& copy):ClapTrap(copy)
 {
-	*this = copy;
 	std::cout << "\033[1;33mThe copy constructor of ScavTrap is called .\033[0;37m" << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator=(ScavTrap const& copy)
 {
-	this->_name_ = copy._name_;
-	this->_HitPoints_ = copy._HitPoints_;
-	this->_EnergyPoints_ = copy._EnergyPoints_;
-	this->_AttackDamage_ = copy._AttackDamage_;
+	if (this != &copy)
+		ClapTrap::operator=(copy);
 	std::cout << "\033[1;33mThe copy assignement operator of ScavTrap is called .\033[0;37m" << std::endl;
 	return (*this);
 }
