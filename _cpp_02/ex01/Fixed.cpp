@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:50:16 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/14 17:40:31 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/19 23:13:05 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Fixed::Fixed():value(0)
 
 Fixed::Fixed(const int val)
 {
-	this->value = val * (1 << this->nbr_frac_bits);
+	this->value = (val << this->nbr_frac_bits);
 	std::cout << "Int constructor called" << std::endl;
 }
 
@@ -61,8 +61,7 @@ float	Fixed::toFloat( void ) const
 Fixed  &Fixed::operator=(const Fixed & copy)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	if (this != &copy)
-		this->value = copy.value;
+	this->value = copy.value;
 	return *this;
 }
 

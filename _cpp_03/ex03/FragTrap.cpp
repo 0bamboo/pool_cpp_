@@ -4,8 +4,8 @@ FragTrap::FragTrap():ClapTrap()
 {
 	this->_name_ = "unknown";
 	this->_HitPoints_ = 100;
-	this->_EnergyPoints_ = 50;
-	this->_AttackDamage_ = 20;
+	this->_EnergyPoints_ = 100;
+	this->_AttackDamage_ = 30;
 	std::cout << "\033[1;33mThe default constructor of FragTrap is called .\033[0;37m" << std::endl;
 }
 
@@ -13,8 +13,8 @@ FragTrap::FragTrap(std::string name):ClapTrap(name)
 {
 	this->_name_ = name;
 	this->_HitPoints_ = 100;
-	this->_EnergyPoints_ = 50;
-	this->_AttackDamage_ = 20;
+	this->_EnergyPoints_ = 100;
+	this->_AttackDamage_ = 30;
 	std::cout << "\033[1;33mThe constructor with parameter of FragTrap is called .\033[0;37m" << std::endl;
 }
 
@@ -39,15 +39,6 @@ void	FragTrap::attack(std::string const& target)
 	std::cout << "\033[1;36mFragTrap " << this->_name_ <<  " attack " << target << ", causing " << this->_AttackDamage_ << " points of damage!" << std::endl;
 }
 
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "\033[1;36mFragTrap " << this->_name_ <<  " has taken " << amount << " of points of damage!" << std::endl;
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	 std::cout << "\033[1;36mFragTrap " << this->_name_ <<  " has repaired " << amount << " of points!" << std::endl;
-}
 
 void	FragTrap::highFivesGuys(void)
 {

@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:50:16 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/13 09:00:44 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/20 00:12:30 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Fixed::Fixed(const float value)
 
 Fixed::Fixed(const Fixed& copy)
 {
+	
 	// std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
 }
@@ -50,8 +51,7 @@ float	Fixed::toFloat( void ) const
 Fixed  &Fixed::operator=(const Fixed & copy)
 {
 	// std::cout << "Assignation operator called" << std::endl;
-	if (this != &copy)
-		this->value = copy.value;
+	this->value = copy.value;
 	return *this;
 }
 

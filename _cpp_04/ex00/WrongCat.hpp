@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 20:36:15 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/20 00:06:32 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/21 17:09:15 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/21 17:09:56 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef WrongCat_H
+# define WrongCat_H
 
-int main( void )
-{
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+# include "WrongAnimal.hpp"
+
+class	WrongCat: public WrongAnimal{
 	
-	a = a - b;
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	return 0;
-}
+	private:
+		std::string	type;
+	
+	public:
+		WrongCat();
+		WrongCat(const WrongCat& copy);
+		~WrongCat();
+		WrongCat& operator = (WrongCat const& copy);
+
+		void		makeSound() const;
+		std::string	getType() const;
+		
+};
+
+#endif

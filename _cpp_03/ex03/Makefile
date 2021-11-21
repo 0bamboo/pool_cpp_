@@ -20,7 +20,7 @@ HDR = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp ./DiamondTrap.cpp
 
 CPP = clang++
 
-CPPFLAGS = -std=c++11 -Wall -Wextra -Werror
+CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 

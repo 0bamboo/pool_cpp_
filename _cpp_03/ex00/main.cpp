@@ -1,18 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/20 06:15:09 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/20 06:15:09 by abdait-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "ClapTrap.hpp"
 
 int main()
 {
-	ClapTrap obj;
 	ClapTrap obj2("abdennacer");
-	ClapTrap obj3(obj2);
-	
-	obj2.attack("chadi");
-	obj3.attack("achraf");
 
+	obj2.attack("Enemy");
 	obj2.takeDamage(20);
-	obj3.takeDamage(20);
-
 	obj2.beRepaired(10);
-	obj3.beRepaired(10);
 	return (0);
 }

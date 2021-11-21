@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 20:36:52 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/18 16:30:02 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/21 15:56:39 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/21 17:18:57 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED
-#define FIXED
+#ifndef ANIMAL_H
+# define ANIMAL_H
 
 # include <iostream>
 
-class Fixed
-{
-	private:
-	
-		int					value;
-		static const int	nbr_frac_bits = 8;
+# define Y "\033[1;33m "
+# define S_B "\033[1;36m"
+# define R "\033[1;31m"
+# define G "\033[1;32m"
+# define W "\033[1;37m"
+# define DEF "\033[0;37m"
 
-	public:
+class	Animal{
 	
-		Fixed(int val);
-		Fixed();
-		Fixed(const Fixed& copy);
-		~Fixed();
-		Fixed&	operator=(const Fixed & copy);
-		int		getRawBits( void ) const;
-		void	setRawBits(int const raw);
+	protected:
+		std::string	type;
+	
+	public:
+		Animal();
+		Animal(const Animal& copy);
+		virtual ~Animal();
+		Animal& operator = (Animal const& copy);
+
+		virtual void		makeSound() const;
+		virtual std::string	getType() const;
+		
 };
 
 #endif

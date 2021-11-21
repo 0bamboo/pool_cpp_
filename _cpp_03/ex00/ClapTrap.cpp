@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/20 06:15:03 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/20 06:15:03 by abdait-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
@@ -41,12 +53,12 @@ void	ClapTrap::attack(std::string const& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "\033[1;36mClapTrap " << this->_name_ <<  " has taken " << amount << " of points of damage!" << std::endl;
+	std::cout << "\033[1;36mClapTrap " << this->_name_ <<  " has lost " << amount << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	 std::cout << "\033[1;36mClapTrap " << this->_name_ <<  " has repaired " << amount << " of points!" << std::endl;
+	 std::cout << "\033[1;36mClapTrap " << this->_name_ <<  " has repaired " << amount << " points!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()

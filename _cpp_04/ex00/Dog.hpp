@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 20:36:15 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/20 00:06:32 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/21 16:00:38 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/21 17:01:31 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef DOG_H
+# define DOG_H
 
-int main( void )
-{
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+# include "Animal.hpp"
+
+class	Dog : public Animal{
 	
-	a = a - b;
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	return 0;
-}
+	private:
+		std::string	type;
+	
+	public:
+		Dog();
+		Dog(const Dog& copy);
+		~Dog();
+		Dog& operator = (Dog const& copy);
+
+		void		makeSound() const;
+		std::string	getType() const;
+		
+};
+
+#endif

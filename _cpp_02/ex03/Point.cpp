@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:22:13 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/15 21:33:43 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/18 16:39:47 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed const&	Point::_get_x_() const
 
 Point&			Point::operator=(const Point& copy)
 {
-	(void)copy;
+	new(this) Point(copy.x.toFloat(), copy.y.toFloat());
 	return (*this);
 }
 
