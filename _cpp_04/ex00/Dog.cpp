@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:36 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/21 17:23:12 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/24 19:41:38 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog()
 {
-	this->type = "Dog";
+	this->type = "Dog"; 
 	std::cout << Y << "The default constructer of Dog is called ." << DEF << std::endl;  
 }
 
