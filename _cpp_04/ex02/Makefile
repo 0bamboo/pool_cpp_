@@ -6,11 +6,11 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/21 15:54:22 by abdait-m          #+#    #+#              #
-#    Updated: 2021/11/27 22:37:43 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/11/28 09:03:04 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brain
+NAME = Abstract
 
 SRCS = Animal.cpp Cat.cpp Dog.cpp Brain.cpp main.cpp
 

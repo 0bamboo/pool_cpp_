@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 16:00:38 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 01:18:49 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/21 16:00:41 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/28 09:06:08 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
-
 # include "Animal.hpp"
+# include "Cat.hpp"
+# include "Dog.hpp"
 
-class	Dog : public Animal{
-	
-	public:
-		Dog();
-		Dog(const Dog& copy);
-		~Dog();
-		Dog& operator = (Dog const& copy);
+int main()
+{
+	// Animal	*a = new Animal();
+	Animal	*cat = new Cat();
+	Animal *dog = new Dog();
 
-		void		makeSound() const;
-		std::string	getType() const;
+	dog->makeSound();
+	cat->makeSound();
 
-};
-
-#endif
+	delete cat;
+	delete dog;
+}

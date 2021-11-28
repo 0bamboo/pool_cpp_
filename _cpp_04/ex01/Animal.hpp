@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:56:39 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/27 22:29:12 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/28 01:14:07 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ANIMAL_H
 
 # include <iostream>
+# include "Brain.hpp"
 
 # define Y "\033[1;33m"
 # define S_B "\033[1;36m"

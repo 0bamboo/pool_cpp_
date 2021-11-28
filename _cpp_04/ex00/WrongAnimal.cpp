@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:04:17 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/21 17:26:35 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/28 02:33:53 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ WrongAnimal::WrongAnimal()
 
 WrongAnimal::WrongAnimal(WrongAnimal const& copy)
 {
-	*this = copy;
+	this->type = copy.type;
 	std::cout << DEF << "The copy constructer of WrongAnimal is called ." << DEF << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:56:18 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 02:33:19 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/21 17:20:54 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Animal::Animal()
 
 Animal::Animal(Animal const& copy)
 {
-	this->type = copy.type;
+	*this = copy;
 	std::cout << Y << "The copy constructer of Animal is called ." << DEF << std::endl;
 }
 
