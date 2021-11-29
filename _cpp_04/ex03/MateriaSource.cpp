@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 21:38:52 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 21:42:59 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/29 21:43:20 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/29 21:46:51 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-# define MATERIASOURCE_HPP
+# include "MateriaSource.hpp"
 
-# include "IMateriaSource.hpp"
+MateriaSource::MateriaSource() { }
 
-class	MateriaSource : public IMateriaSource{
+MateriaSource::MateriaSource(MateriaSource const& obj) 
+{
 	
-	public:
-		MateriaSource();
-		MateriaSource(MateriaSource const& obj);
-		MateriaSource&	operator = (MateriaSource const& obj);
-		~MateriaSource();
+}
 
-		void		learnMateria(AMateria*);
-		AMateria*	createMateria(std::string const& type);
+MateriaSource&	MateriaSource::operator = (MateriaSource const& obj)
+{
+	
+}
 
-};
+void	MateriaSource::learnMateria(AMateria*)
+{
 
-#endif
+}
+
+AMateria*	MateriaSource::createMateria(std::string const& type)
+{
+	
+}
+
+MateriaSource::~MateriaSource()
+{
+
+}
