@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 16:00:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 18:31:11 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/29 17:33:19 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/29 17:34:55 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
-# include "Animal.hpp"
+# include "AMateria.hpp"
 
-class	Cat: public Animal{
-	
-	private:
-		Brain	*_brain;
-	
+class IMateriaSource
+{
 	public:
-		Cat();
-		Cat(Cat const& copy);
-		~Cat();
-		Cat& operator = (Cat const& copy);
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 
-		void		makeSound() const;
-		void		_set_brain_(Brain& brain);
-		Brain&		_get_brain_();
-		std::string	getType() const;
-		
 };
 
 #endif

@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 16:00:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 18:31:11 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/29 17:29:11 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/29 17:30:59 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+# include "Ice.hpp"
 
-# include "Animal.hpp"
+Ice::Ice() 
+{
+	this->type = "ice";
+}
 
-class	Cat: public Animal{
+Ice::Ice(Ice const& obj)
+{
+	this->type = obj.type;
+}
+
+Ice&	Ice::operator = (Ice const& obj)
+{
+	this->type = obj.type;
+	return (*this);
+}
+
+std::string const& Ice::getType() const
+{
+	return (this->type);
+}
+
+AMateria*	Ice::clone() const
+{
+	return (new Ice);
+}
+
+void		Ice::use(ICharacter& target)
+{
 	
-	private:
-		Brain	*_brain;
-	
-	public:
-		Cat();
-		Cat(Cat const& copy);
-		~Cat();
-		Cat& operator = (Cat const& copy);
-
-		void		makeSound() const;
-		void		_set_brain_(Brain& brain);
-		Brain&		_get_brain_();
-		std::string	getType() const;
-		
-};
-
-#endif
+}

@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 16:00:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 18:31:11 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/29 17:17:22 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/29 17:28:07 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+# include "Cure.hpp"
 
-# include "Animal.hpp"
+Cure::Cure() 
+{
+	this->type = "cure";
+}
 
-class	Cat: public Animal{
+Cure::Cure(Cure const& obj)
+{
+	this->type = obj.type;
+}
+
+Cure&	Cure::operator = (Cure const& obj)
+{
+	this->type = obj.type;
+	return (*this);
+}
+
+std::string const& Cure::getType() const
+{
+	return (this->type);
+}
+
+AMateria*	Cure::clone() const
+{
+	return (new Cure);
+}
+
+void		Cure::use(ICharacter& target)
+{
 	
-	private:
-		Brain	*_brain;
-	
-	public:
-		Cat();
-		Cat(Cat const& copy);
-		~Cat();
-		Cat& operator = (Cat const& copy);
-
-		void		makeSound() const;
-		void		_set_brain_(Brain& brain);
-		Brain&		_get_brain_();
-		std::string	getType() const;
-		
-};
-
-#endif
+}

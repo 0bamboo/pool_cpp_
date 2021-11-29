@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 16:00:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 18:31:11 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/29 17:09:24 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/29 17:18:33 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef CURE_H
+# define CURE_H
 
-# include "Animal.hpp"
+# include "AMateria.hpp"
 
-class	Cat: public Animal{
-	
-	private:
-		Brain	*_brain;
+class	Cure : public AMateria{
 	
 	public:
-		Cat();
-		Cat(Cat const& copy);
-		~Cat();
-		Cat& operator = (Cat const& copy);
-
-		void		makeSound() const;
-		void		_set_brain_(Brain& brain);
-		Brain&		_get_brain_();
-		std::string	getType() const;
+		Cure();
+		Cure(Cure const& obj);
+		~Cure();
+		Cure& operator = (Cure const& obj);
 		
+		std::string const&	getType() const;
+		AMateria*			clone() const;
+		void				use(ICharacter& target);
+
 };
 
 #endif

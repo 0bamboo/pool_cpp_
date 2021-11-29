@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 16:00:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 18:31:11 by abdait-m         ###   ########.fr       */
+/*   Created: 2021/11/29 17:01:28 by abdait-m          #+#    #+#             */
+/*   Updated: 2021/11/29 17:08:27 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+# include "AMateria.hpp"
 
-# include "Animal.hpp"
+AMateria::AMateria() { }
 
-class	Cat: public Animal{
-	
-	private:
-		Brain	*_brain;
-	
-	public:
-		Cat();
-		Cat(Cat const& copy);
-		~Cat();
-		Cat& operator = (Cat const& copy);
+std::string const& AMateria::getType() const 
+{
+	return (this->type);
+}
 
-		void		makeSound() const;
-		void		_set_brain_(Brain& brain);
-		Brain&		_get_brain_();
-		std::string	getType() const;
-		
-};
+void	AMateria::use (ICharacter& target) 
+{
+	(void)target;
+}
 
-#endif
+AMateria::~AMateria() { }

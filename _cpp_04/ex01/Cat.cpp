@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:31 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 01:57:17 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:14:14 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ Cat::Cat(Cat const& copy)
 
 Cat&	Cat::operator = (Cat const& copy)
 {
-	this->_brain = new Brain();
-	
 	*this->_brain = *copy._brain;
 	this->type = copy.type;
 	std::cout << Y << "The assignment operator of Cat is called ." << DEF << std::endl;
