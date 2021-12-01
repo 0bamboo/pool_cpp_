@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:56:39 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 09:05:03 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 02:11:18 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class	Animal{
 		virtual ~Animal();
 		Animal& operator = (Animal const& copy);
 
-		virtual void		makeSound() = 0;
-		virtual std::string	getType() = 0;
+		virtual void		makeSound() const = 0;
+		virtual std::string	getType() const = 0;
 		
 };
 

@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:17:22 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 17:28:07 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 10:31:01 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,14 @@ std::string const& Cure::getType() const
 
 AMateria*	Cure::clone() const
 {
-	return (new Cure);
+	return (new Cure());
 }
 
 void		Cure::use(ICharacter& target)
 {
-	
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}
+
+Cure::~Cure() 
+{
 }

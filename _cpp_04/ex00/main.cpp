@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:41 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/27 23:00:28 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:51:19 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main()
 	delete i;
 	delete meta;
 
-	std::cout << std::endl << "SECOND TEST : ======================" << std::endl << std::endl;
+	std::cout << std::endl << "SECOND TEST : =========================================" << std::endl << std::endl;
 	
 	const WrongAnimal *a = new WrongAnimal();
 	const WrongAnimal *wcat = new WrongCat();

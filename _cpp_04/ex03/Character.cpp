@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:57:10 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 20:40:27 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 08:37:20 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,7 @@ Character::Character(std::string name)
 
 Character::Character(Character const& obj)
 {
-	this->name = obj.name;
-	this->count = obj.count;
-	for(int i = 0;i < 4; i++)
-	{
-		if (this->array[i])
-			delete array[i];
-		this->array[i] = obj.array[i]->clone();
-	}
+	*this = obj;
 }
 
 Character&	Character::operator = (Character const& obj)
@@ -51,7 +44,11 @@ Character&	Character::operator = (Character const& obj)
 	this->name = obj.name;
 	this->count = obj.count;
 	for(int i = 0;i < 4; i++)
+	{
+		delete array[i];
 		this->array[i] = obj.array[i]->clone();
+	}
+	return (*this);
 }
 
 std::string const&	Character::getName() const
@@ -77,4 +74,13 @@ void	Character::use(int idx, ICharacter& target)
 	if (idx >= 0 && idx < 4)
 		if (array[idx])
 			array[idx]->use(target);
+}
+
+Character::~Character()
+{
+	for (int i = 0; i < 4; i++)
+	{
+		delete array[i];
+		array[i] = NULL;
+	}
 }

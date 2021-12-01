@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:38:52 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 21:42:59 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 03:56:14 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 
 class	MateriaSource : public IMateriaSource{
 	
+	private:
+		AMateria *materials[4];
+
 	public:
 		MateriaSource();
 		MateriaSource(MateriaSource const& obj);

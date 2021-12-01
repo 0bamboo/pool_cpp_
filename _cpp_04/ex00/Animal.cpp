@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:56:18 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 02:33:19 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:45:52 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-	this->type = "animal";
+	this->type = "Animal";
 	std::cout << Y << "The default constructer of Animal is called ." << DEF << std::endl;  
 }
 

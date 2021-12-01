@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 22:15:12 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 02:23:42 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:55:38 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Brain&	Brain::operator = (Brain const& obj)
 
 std::string	Brain::_get_idea_(int number)
 {
-	if (number < count_ideas)
+	if (number >= 0 && number < count_ideas)
 		return (this->ideas[number]);
 	else
 		return ("<no idea>");

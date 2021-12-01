@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:29:11 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 17:30:59 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 10:31:25 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,14 @@ std::string const& Ice::getType() const
 
 AMateria*	Ice::clone() const
 {
-	return (new Ice);
+	return (new Ice());
 }
 
 void		Ice::use(ICharacter& target)
 {
-	
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}
+
+Ice::~Ice() 
+{
 }

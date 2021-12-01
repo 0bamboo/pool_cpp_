@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:36 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 20:14:53 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 02:08:21 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,38 @@ Dog::Dog()
 
 Dog::Dog(Dog const& copy)
 {
-	*this->_brain = *copy._brain;
+	this->_brain = new Brain(copy._get_brain_());
 	this->type = copy.type;
 	std::cout << Y << "The copy constructer of Dog is called ." << DEF << std::endl;
 }
 
 Dog&	Dog::operator = (Dog const& copy)
 {
-	*this->_brain = *copy._brain;
+	delete this->_brain;
+	
+	this->_brain = new Brain(copy._get_brain_());
 	this->type = copy.type;
 	std::cout << Y << "The assignment operator of Dog is called ." << DEF << std::endl;
 	return  (*this);
 }
 
-void	Dog::makeSound()
+void	Dog::makeSound() const
 {
-	std::cout << "Dog is barking !!" << std::endl;
+	std::cout << "Woof Woof Woof !!" << std::endl;
 }
 
-std::string	Dog::getType()
+std::string	Dog::getType() const
 {
 	return (this->type);
 }
 
 void	Dog::_set_brain_(Brain& brain)
 {
-	this->_brain = &brain;
+	delete this->_brain;
+	this->_brain = new Brain(brain);
 }
 
-Brain&	Dog::_get_brain_()
+Brain&	Dog::_get_brain_() const
 {
 	return (*this->_brain);
 }

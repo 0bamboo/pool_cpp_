@@ -6,17 +6,17 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/21 15:54:22 by abdait-m          #+#    #+#              #
-#    Updated: 2021/11/29 15:55:03 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/11/30 22:35:23 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Abstract
+NAME = Interface
 
-SRCS = 
+SRCS = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = 
+HDR = AMateria.hpp  Character.hpp  Cure.hpp  Ice.hpp  ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp 
 
 CPP = clang++
 

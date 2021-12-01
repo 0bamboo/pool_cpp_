@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:47:40 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 20:23:06 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:34:12 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class	Character : public ICharacter{
 
 	public:
 		Character();
-		Character(Character const& obj);
 		Character(std::string name);
+		Character(Character const& obj);
 		Character&	operator = (Character const& obj);
 		~Character();
 

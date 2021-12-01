@@ -6,52 +6,53 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:31 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 20:14:14 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 02:00:48 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Cat.hpp"
+#include "Cat.hpp"
 
 Cat::Cat()
 {
 	this->type = "Cat";
 	this->_brain = new Brain();
-	std::cout << Y << "The default constructer of Cat is called ." << DEF << std::endl;  
+	std::cout << Y << "The default constructer of Cat is called ." << DEF << std::endl;
 }
 
-Cat::Cat(Cat const& copy)
+Cat::Cat(Cat const &copy)
 {
-	this->_brain = new Brain();
-	
-	*this->_brain = *copy._brain;
+	this->_brain = new Brain(copy._get_brain_());
 	this->type = copy.type;
 	std::cout << Y << "The copy constructer of Cat is called ." << DEF << std::endl;
 }
 
-Cat&	Cat::operator = (Cat const& copy)
+Cat &Cat::operator=(Cat const &copy)
 {
-	*this->_brain = *copy._brain;
+	delete this->_brain;
+	
+	this->_brain = new Brain(copy._get_brain_());
 	this->type = copy.type;
 	std::cout << Y << "The assignment operator of Cat is called ." << DEF << std::endl;
-	return  (*this);
+	return (*this);
 }
 
-void	Cat::makeSound() const
+void Cat::makeSound() const
 {
 	std::cout << "Meow Meow Meow !!" << std::endl;
 }
 
-std::string	Cat::getType() const
+std::string Cat::getType() const
 {
 	return (this->type);
 }
 
-void	Cat::_set_brain_(Brain& brain)
+void Cat::_set_brain_(Brain &brain)
 {
-	this->_brain = &brain;
+	delete this->_brain;
+	this->_brain = new Brain(brain);
 }
 
-Brain&	Cat::_get_brain_()
+Brain&	Cat::_get_brain_() const
 {
 	return (*this->_brain);
 }

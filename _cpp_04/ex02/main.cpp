@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:41 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 18:28:00 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 04:40:26 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,10 @@
 
 int main()
 {
-	// Animal	*a = new Animal();
-	Animal	*cat = new Cat();
-	Animal *dog = new Dog();
+	// Animal *test = new Animal;
+	Animal *test = new Cat();
 
-	dog->makeSound();
-	cat->makeSound();
+	std::cout << test->getType() << std::endl;
 
-	delete cat;
-	delete dog;
+	delete test;
 }

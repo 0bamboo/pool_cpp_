@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:38 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 09:05:59 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 01:51:35 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ class	Dog : public Animal{
 		~Dog();
 		Dog& operator = (Dog const& copy);
 
-		void		makeSound();
-		std::string	getType();
+		void		makeSound() const;
+		std::string	getType() const;
 		void		_set_brain_(Brain& brain);
-		Brain&		_get_brain_();
+		Brain&		_get_brain_() const;
 
 };
 

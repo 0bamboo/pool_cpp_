@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:36 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 02:33:41 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:48:59 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Dog&	Dog::operator = (Dog const& copy)
 
 void	Dog::makeSound() const
 {
-	std::cout << "Dog is barking !!" << std::endl;
+	std::cout << "Woof Woof !!" << std::endl;
 }
 
 std::string	Dog::getType() const

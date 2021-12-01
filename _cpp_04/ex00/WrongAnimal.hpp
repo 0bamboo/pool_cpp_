@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:04:34 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/24 17:34:06 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 23:47:50 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class	WrongAnimal{
 
 		void		makeSound() const;
 		std::string	getType() const;
-		
+
 };
 
 #endif

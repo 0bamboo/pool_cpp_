@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:06:12 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/29 17:31:15 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:56:17 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
