@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:38:52 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/01 03:56:14 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:31:03 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MATERIASOURCE_HPP
 
 # include "IMateriaSource.hpp"
+# define Max_Materials 4
 
 class	MateriaSource : public IMateriaSource{
 	

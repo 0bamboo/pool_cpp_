@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:47:40 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/30 21:34:12 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:33:16 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 # define CHARACTER_HPP
 
 # include "AMateria.hpp"
+# define Max_Materials 4
 
 class	Character : public ICharacter{
 	
 	private:
 		std::string	name;
 		int			count;
-		AMateria *array[4];
+		AMateria *array[Max_Materials];
 
 	public:
 		Character();

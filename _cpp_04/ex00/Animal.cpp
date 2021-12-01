@@ -6,21 +6,19 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:56:18 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/30 23:45:52 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:38:50 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal():type("Animal")
 {
-	this->type = "Animal";
 	std::cout << Y << "The default constructer of Animal is called ." << DEF << std::endl;  
 }
 
-Animal::Animal(Animal const& copy)
+Animal::Animal(Animal const& copy):type(copy.type)
 {
-	this->type = copy.type;
 	std::cout << Y << "The copy constructer of Animal is called ." << DEF << std::endl;
 }
 

@@ -6,16 +6,15 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:31 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/01 02:00:48 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:20:04 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat():_brain(new Brain())
 {
 	this->type = "Cat";
-	this->_brain = new Brain();
 	std::cout << Y << "The default constructer of Cat is called ." << DEF << std::endl;
 }
 

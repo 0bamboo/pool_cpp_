@@ -6,28 +6,20 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 22:15:12 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/30 23:55:38 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:18:20 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Brain.hpp"
 
-Brain::Brain()
+Brain::Brain():count_ideas(0)
 {
-	this->count_ideas = 0;
 	std::cout << Y << "The default constructer of Brain is called ." << DEF << std::endl;
 }
 
 Brain::Brain(Brain const& obj)
 {
-	int	i = -1;
-	
-	if (this != &obj)
-	{
-		this->count_ideas = obj.count_ideas;
-		while (++i < obj.count_ideas)
-			this->ideas[i] = obj.ideas[i];
-	}
+	*this = obj;
 	std::cout << Y << "The copy constructer of Brain is called ." << DEF << std::endl;
 }
 

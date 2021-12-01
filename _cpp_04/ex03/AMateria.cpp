@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:01:28 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/30 22:26:01 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:21:37 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 AMateria::AMateria() { }
 
-AMateria::AMateria(std::string const& type)
+AMateria::AMateria(std::string const& type):type(type)
 {
-	this->type = type;
 }
 
 std::string const& AMateria::getType() const 

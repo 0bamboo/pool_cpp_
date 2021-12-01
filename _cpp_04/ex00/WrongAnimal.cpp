@@ -6,21 +6,19 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:04:17 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/11/28 02:33:53 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:37:11 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal():type("WrongAnimal")
 {
-	this->type = "WrongAnimal";
 	std::cout << Y << "The default constructer of WrongAnimal is called ." << DEF << std::endl;  
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const& copy)
+WrongAnimal::WrongAnimal(WrongAnimal const& copy):type(copy.type)
 {
-	this->type = copy.type;
 	std::cout << DEF << "The copy constructer of WrongAnimal is called ." << DEF << std::endl;
 }
 
