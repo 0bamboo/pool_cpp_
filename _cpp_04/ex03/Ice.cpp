@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:29:11 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/01 10:31:25 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:40:36 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ Ice::Ice()
 	this->type = "ice";
 }
 
-Ice::Ice(Ice const& obj)
-{
-	this->type = obj.type;
-}
+Ice::Ice(Ice const& obj):AMateria(obj)
+{ }
 
 Ice&	Ice::operator = (Ice const& obj)
 {
-	this->type = obj.type;
+	*(AMateria *)this = obj;
 	return (*this);
 }
 

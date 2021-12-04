@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:43:20 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/01 18:31:52 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:47:32 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ AMateria*	MateriaSource::createMateria(std::string const& type)
 {
 	for (int i = 0; i < Max_Materials; i++)
 	{
-		if (type == materials[i]->getType())
+		if (materials[i] && type == materials[i]->getType())
 			return (materials[i]->clone());
 	}
 	return (nullptr);

@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 16:00:36 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/01 02:08:21 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:22:45 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,21 @@ Dog::Dog()
 	std::cout << Y << "The default constructer of Dog is called ." << DEF << std::endl;  
 }
 
-Dog::Dog(Dog const& copy)
+Dog::Dog(Dog const& copy):Animal(copy)
 {
 	this->_brain = new Brain(copy._get_brain_());
-	this->type = copy.type;
 	std::cout << Y << "The copy constructer of Dog is called ." << DEF << std::endl;
 }
 
 Dog&	Dog::operator = (Dog const& copy)
 {
-	delete this->_brain;
+	*(Animal *)this = copy;
 	
+	delete this->_brain;
 	this->_brain = new Brain(copy._get_brain_());
-	this->type = copy.type;
+	
 	std::cout << Y << "The assignment operator of Dog is called ." << DEF << std::endl;
+	
 	return  (*this);
 }
 

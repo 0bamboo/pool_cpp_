@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:17:22 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/01 10:31:01 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:39:54 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ Cure::Cure()
 	this->type = "cure";
 }
 
-Cure::Cure(Cure const& obj)
-{
-	this->type = obj.type;
-}
+Cure::Cure(Cure const& obj):AMateria(obj)
+{ }
 
 Cure&	Cure::operator = (Cure const& obj)
 {
-	this->type = obj.type;
+	*(AMateria *)this = obj;
 	return (*this);
 }
 
