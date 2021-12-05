@@ -16,17 +16,59 @@
 # include <iostream>
 # include <stdexcept>
 
+# define Y "\033[1;33m"
+# define S_B "\033[1;36m"
+# define R "\033[1;31m"
+# define G "\033[1;32m"
+# define W "\033[1;37m"
+# define DEF "\033[0;37m"
+
+# define HIGH_G 1
+# define LOW_G 150
+
 class	Bureaucrat{
 
 	private:
-		
+		std::string const	_name_;
+		unsigned int		_grade_;
 
 	public:
 		Bureaucrat();
 		Bureaucrat(Bureaucrat const& copy);
+		Bureaucrat(std::string const& name, unsinged int& grade);
 		Bureaucrat& operator = (Bureaucrat const& copy);
 		~Bureaucrat();
 
+		// Getters :
+		std::string&	getName() const;
+		unsigned int&	getGrade() const;
+
+		void			incrementGrade();
+		void			decrementGrade();
+
+		// Nested classes for exceptions :
+
+		class	GradeTooHighException : public std::exception{
+
+			public:
+				GradeTooHighException();
+				~GradeTooHighException();
+
+				const char*	what() const throw();
+		};
+
+		class	GradeTooLowException : public std::exception{
+
+			public:
+				GradeTooLowException();
+				~GradeTooLowException();
+
+				const char*	what() const throw();
+		};
+
+
 };
+
+std::ostream&	operator << (std::ostream& output, const Bureaucrat& obj);
 
 #endif
