@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:08 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/04 22:10:39 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/05 18:37:21 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ class	Bureaucrat{
 	public:
 		Bureaucrat();
 		Bureaucrat(Bureaucrat const& copy);
-		Bureaucrat(std::string const& name, unsinged int& grade);
+		Bureaucrat(std::string const& name, unsigned int& grade);
 		Bureaucrat& operator = (Bureaucrat const& copy);
 		~Bureaucrat();
 
 		// Getters :
-		std::string&	getName() const;
-		unsigned int&	getGrade() const;
+		std::string const&	getName() const;
+		unsigned int const&	getGrade() const;
 
 		void			incrementGrade();
 		void			decrementGrade();
@@ -51,8 +51,8 @@ class	Bureaucrat{
 		class	GradeTooHighException : public std::exception{
 
 			public:
-				GradeTooHighException();
-				~GradeTooHighException();
+				// GradeTooHighException();
+				// ~GradeTooHighException() throw();
 
 				const char*	what() const throw();
 		};
@@ -60,8 +60,8 @@ class	Bureaucrat{
 		class	GradeTooLowException : public std::exception{
 
 			public:
-				GradeTooLowException();
-				~GradeTooLowException();
+				// GradeTooLowException();
+				// ~GradeTooLowException() throw();
 
 				const char*	what() const throw();
 		};
