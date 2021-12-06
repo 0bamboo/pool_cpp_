@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:37 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 11:02:28 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/06 14:05:54 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ Form::Form(const std::string& name, const unsigned int& signedGrade, const unsig
 	try
 	{
 		if (signedGrade < HIGH_G || executeGrade < HIGH_G)
-			throw GradeTooHighException("The grades of form" + name + "are too high . range [1 - 150].");
+			throw GradeTooHighException("The grades of form " + name + " are too high . range [1 - 150].");
 		else if (signedGrade > LOW_G || executeGrade > LOW_G)
-			throw GradeTooLowException("The grades of form" + name + "are too low . range [1 - 150].");
+			throw GradeTooLowException("The grades of form " + name + " are too low . range [1 - 150].");
 		else
 			std::cout << G << name << " Form is created successfully ." << DEF << std::endl;
 	}
@@ -91,7 +91,8 @@ Form::GradeTooLowException::~GradeTooLowException() throw() { }
 
 std::ostream&	operator << (std::ostream& output, Form const& obj)
 {
-	output << obj.getName() << ", Form sign grade: " << obj.getSignGrade() << " with execute grade : " << obj.getExGrade() << (obj._isSigned_() == true ? " signed" : " not signed");
+	output << obj.getName() << ", Form [ sign grade = " << obj.getSignGrade() << " ] with [ execute grade = " << obj.getExGrade() <<" ], and is" \
+		<< (obj._isSigned_() == true ? " signed." : " not signed.") << std::endl;
 	return (output);
 }
 

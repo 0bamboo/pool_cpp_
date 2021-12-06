@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:05 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 10:54:52 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/06 14:10:50 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Bureaucrat::Bureaucrat(std::string const& name, unsigned int& grade):_name_(name
 	catch(const std::exception& exc)
 	{
 		std::cout << R << "Constructor failed for Bureaucrat" + _name_ << DEF << std::endl;
-		throw;
+		throw ;
 	}
 }
 
@@ -69,7 +69,7 @@ void	Bureaucrat::signForm(Form& f)
 	try
     {
         f.beSigned(*this);
-        std::cout << this->_name_ << " sign " << f.getName() << std::endl;
+        std::cout << W << this->_name_ << " sign " << f.getName() << DEF << std::endl;
     }
     catch(const std::exception& exc)
     {
