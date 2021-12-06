@@ -6,33 +6,25 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:11 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 22:24:08 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/06 22:17:01 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Bureaucrat.hpp"
+
+# include "Intern.hpp"
 
 int main()
 {
-    std::string test1 = "test 1";
-    std::string test2 = "test 2";
-    unsigned int t1 = 140;
-    unsigned int t2 = 1;
 	try
-    {
-        Bureaucrat test_1(test1, t1);
-        std::cout << test_1 ;
-
-        Bureaucrat test_2(test2, t2);
-        std::cout << test_2 ;
-        test_2.incrementGrade();
-    }
-    catch(const std::exception& e)
-    {
-        std::cout << "Catch of main : \n";
-        std::cout << e.what();
-    }
-    std::cout << "Done ! \n";
-    
-    return 0;
+	{
+		Intern	test;
+		Form	*form;
+		
+		form = test.makeForm("robotomy requsest", "Bender");
+	}
+	catch(const std::exception& e)
+	{
+		std::cout <<R<< e.what() <<DEF<< '\n';
+	}
+	
 }
