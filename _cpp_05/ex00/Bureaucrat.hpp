@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
 # include <stdexcept>
 
 # define Y "\033[1;33m"

@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:08 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/05 18:37:21 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/06 09:17:35 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <stdexcept>
+# include <exception>
+# include "Form.hpp"
 
 # define Y "\033[1;33m"
 # define S_B "\033[1;36m"
@@ -25,6 +27,8 @@
 
 # define HIGH_G 1
 # define LOW_G 150
+
+class Form;
 
 class	Bureaucrat{
 
@@ -45,6 +49,7 @@ class	Bureaucrat{
 
 		void			incrementGrade();
 		void			decrementGrade();
+		void			signForm(Form& f);
 
 		// Nested classes for exceptions :
 

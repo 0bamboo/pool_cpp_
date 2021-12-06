@@ -6,17 +6,17 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/04 20:54:13 by abdait-m          #+#    #+#              #
-#    Updated: 2021/12/04 22:08:33 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/12/06 09:21:31 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Exceptions
+NAME = Form
 
-SRCS = Bureaucrat.cpp main.cpp
+SRCS = Bureaucrat.cpp Form.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = Bureaucrat.hpp
+HDR = Bureaucrat.hpp Form.hpp
 
 CPP = clang++
 

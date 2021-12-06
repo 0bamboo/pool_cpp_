@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:05 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/05 18:37:11 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/06 10:54:52 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,20 @@ void	Bureaucrat::decrementGrade()
 	if (this->_grade_ == LOW_G)
 		throw GradeTooLowException();
 	this->_grade_++;
+}
+
+void	Bureaucrat::signForm(Form& f)
+{
+	try
+    {
+        f.beSigned(*this);
+        std::cout << this->_name_ << " sign " << f.getName() << std::endl;
+    }
+    catch(const std::exception& exc)
+    {
+        std::cout << R << this->_name_ <<  " cannot sign " << f.getName() << " because " << exc.what() << DEF << std::endl;
+        throw ;
+	}
 }
 
 // Attributes of nested classes :
