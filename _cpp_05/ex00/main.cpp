@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:11 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 22:24:08 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:28:19 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ int main()
 
         Bureaucrat test_2(test2, t2);
         std::cout << test_2 ;
+
+        // error of incrementing the grade
         test_2.incrementGrade();
     }
     catch(const std::exception& e)
     {
-        std::cout << "Catch of main : \n";
-        std::cout << e.what();
+        std::cout << R << "Catch of main : \n";
+        std::cout << e.what() << DEF;
     }
     std::cout << "Done ! \n";
     

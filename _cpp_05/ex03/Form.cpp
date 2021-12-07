@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:37 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 19:30:02 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:14:15 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,15 @@ void					Form::beSigned(Bureaucrat const& b)
 	this->_signed_ = true;
 }
 
+void					Form::execute(Bureaucrat const& executor) const
+{
+	if (!this->_signed_)
+		throw NotSigned("Form " + this->_name_+ " not signed .");
+	else if (executor.getGrade() >= this->_Sgrade_)
+		throw GradeTooLowException("Executor " + executor.getName() +" can't sign " + this->_name_);
+	this->action();
+}
+
 // Attributes of nested classes :
 
 //------GradeTooHighException-------- {
@@ -86,6 +95,19 @@ const char*	Form::GradeTooLowException::what() const throw()
 }
 
 Form::GradeTooLowException::~GradeTooLowException() throw() { }
+
+//---------------------------------- }
+
+//------NotSigned-------- {
+
+Form::NotSigned::NotSigned(std::string const& errorMsg):_error_(errorMsg) { }
+
+const char*	Form::NotSigned::what() const throw()
+{
+	return (_error_.c_str());
+}
+
+Form::NotSigned::~NotSigned() throw() { }
 
 //---------------------------------- }
 

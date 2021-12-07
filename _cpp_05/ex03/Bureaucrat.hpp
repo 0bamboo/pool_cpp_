@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:08 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 09:17:35 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:15:36 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ class	Bureaucrat{
 		void			incrementGrade();
 		void			decrementGrade();
 		void			signForm(Form& f);
+
+		void			executeForm(Form const& form);
 
 		// Nested classes for exceptions :
 

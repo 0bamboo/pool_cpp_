@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:57:24 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 20:24:12 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:42:37 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ RobotomyRequestForm::~RobotomyRequestForm() { }
 
 void	RobotomyRequestForm::action() const
 {
-    srand(time(NULL));
-    int _rnum_ =  rand() % 2;
+    srand(time(0));
+    int _rnum_ =  rand();
     
 	std::cout << std::endl << W << "!!!!---------****** WEIRD NOISE ******--------!!!!" << std::endl;
 	if (_rnum_ % 2 == 0)

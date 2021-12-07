@@ -6,13 +6,13 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:05 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 13:47:22 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:26:12 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat():_name_(""), _grade_(0) { }
+Bureaucrat::Bureaucrat():_name_(""), _grade_(10) { }
 
 Bureaucrat::Bureaucrat(std::string const& name, unsigned int& grade):_name_(name)
 {

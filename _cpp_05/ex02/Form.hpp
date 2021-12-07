@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:42 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 20:47:48 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:04:57 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ class	Form{
 
 		void				beSigned(Bureaucrat const& b);
 
+		void			execute(Bureaucrat const& executor) const;
+		virtual void	action() const = 0;
+
 		// Nested classes for exceptions :
 		class	GradeTooHighException : public std::exception{
 
@@ -64,6 +67,19 @@ class	Form{
 
 				const char*	what() const throw();
 		};
+
+		class	NotSigned : public std::exception{
+			
+			private:
+				std::string const	_error_;
+
+			public:
+				NotSigned(std::string const& errorMsg);
+				~NotSigned() throw();
+
+				const char*	what() const throw();
+		};
+
 };
 
 std::ostream&	operator << (std::ostream& output, const Form& obj);

@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/12/04 20:54:13 by abdait-m          #+#    #+#              #
-#    Updated: 2021/12/07 17:28:17 by abdait-m         ###   ########.fr        #
+#    Created: 2021/12/07 18:51:58 by abdait-m          #+#    #+#              #
+#    Updated: 2021/12/07 18:52:13 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Intern
+NAME = 
 
-SRCS = Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp main.cpp
+SRCS = 
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
+HDR = 
 
 CPP = clang++
 

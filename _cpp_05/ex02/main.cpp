@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:54:11 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/06 20:28:38 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:24:27 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@
 
 int main()
 {
+	std::string bname = "b1";
+	unsigned int sign1 = 55;
+	// unsigned int sign2 = 1;
 	try
 	{
+		Bureaucrat	b1(bname, sign1);
+		// Bureaucrat	b2(bname, sign2);
+		
 		std::cout << std::endl;
 		ShrubberyCreationForm shrubbery("abdennacer");
 		shrubbery.action();
@@ -32,11 +38,24 @@ int main()
 		robot.action();
 		std::cout << std::endl;
 
-		Form	test("achraf", 1, 166);
+		// test execute attribute :
+		// Form	*test = new PresidentialPardonForm("ralf");
+
+		// test->beSigned(b2);
+		// test->execute(b1);
+		
+		std::string b = "bureau";
+		unsigned int bb = 145;
+		Bureaucrat	test1(b, bb);
+
+		test1.executeForm(presid);
+
 	}
 	catch(const std::exception& e)
 	{
-		std::cout <<std::endl<<R<< e.what() <<DEF<< '\n';
+		std::cout << std::endl<<R<< e.what() <<DEF<< '\n';
 	}
+
+	std::cout << "END ! " << std::endl;
 	
 }
