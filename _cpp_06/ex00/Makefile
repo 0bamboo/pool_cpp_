@@ -6,17 +6,17 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/07 18:51:58 by abdait-m          #+#    #+#              #
-#    Updated: 2021/12/07 18:52:13 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/12/07 22:07:18 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = convert
 
-SRCS = 
+SRCS = Convert.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = 
+HDR = Convert.hpp
 
 CPP = clang++
 
