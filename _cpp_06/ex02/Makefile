@@ -6,11 +6,11 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/07 18:51:58 by abdait-m          #+#    #+#              #
-#    Updated: 2021/12/09 23:04:40 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/12/10 00:26:36 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = serialize
+NAME = 
 
 SRCS =  main.cpp
 
