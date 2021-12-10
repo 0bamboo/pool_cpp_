@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = dynamic_cast
 
 SRCS =  main.cpp
 
@@ -20,7 +20,7 @@ HDR =
 
 CPP = clang++
 
-CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
+CPPFLAGS = -std=c++11 -Wall -Wextra -Werror
 
 all: $(NAME)
 
