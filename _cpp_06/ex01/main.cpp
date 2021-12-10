@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 22:40:31 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/10 00:51:33 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/10 01:16:27 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int main()
 
 	test = serialize(t);
 	std::cout << "------------------ AFTER SERIALIZATION ---------------" << std::endl;
+	std::cout << test << std::endl;
 	std::cout << "i   : " << t->i << std::endl;
 	std::cout << "str : " << t->str << std::endl;
 	std::cout << "c   : " << t->c << std::endl;
