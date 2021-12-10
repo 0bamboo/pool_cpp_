@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 22:40:31 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/10 01:16:27 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/10 01:23:49 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,11 @@ int main()
 
 	test = serialize(t);
 	std::cout << "------------------ AFTER SERIALIZATION ---------------" << std::endl;
-	std::cout << test << std::endl;
+	// int*g =  reinterpret_cast<int*>(test);
+	// std::cout << *g << std::endl;
+	// test++;
+	// std::string *k = reinterpret_cast<std::string *>(test);
+	// std::cout << k << std::endl;
 	std::cout << "i   : " << t->i << std::endl;
 	std::cout << "str : " << t->str << std::endl;
 	std::cout << "c   : " << t->c << std::endl;
