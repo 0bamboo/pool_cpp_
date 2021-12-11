@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 22:40:31 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/10 01:23:49 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/11 00:22:29 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ struct Data
 	int				i;
 	std::string		str;
 	char			c;
-	unsigned long long t;
 };
 
 uintptr_t		serialize(Data*	ptr)
@@ -38,7 +37,6 @@ int main()
 	t->i = 20;
 	t->str = "hello world;";
 	t->c = 'A';
-	t->t = 99999999999999;
 
 	test = serialize(t);
 	std::cout << "------------------ AFTER SERIALIZATION ---------------" << std::endl;
@@ -50,12 +48,11 @@ int main()
 	std::cout << "i   : " << t->i << std::endl;
 	std::cout << "str : " << t->str << std::endl;
 	std::cout << "c   : " << t->c << std::endl;
-	std::cout << "ull : " << t->t << std::endl;
 	std::cout << "------------------ AFTER DESERIALIZATION ---------------" << std::endl;
 	t = deserialize(test);
 	std::cout << "i   : " << t->i << std::endl;
 	std::cout << "str : " << t->str << std::endl;
-	std::cout << "ull : " << t->t << std::endl;
+	std::cout << "ull : " << t->c << std::endl;
 	
 	delete t;
 }

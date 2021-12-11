@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:53:52 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/09 22:50:58 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/11 00:19:38 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ int		Convert::_convert_char()
 	try
 	{
 		this->c_int = std::stoi(this->str_convert);
-		std::cout << this->c_int << std::endl;
 		this->in_t = std::to_string(this->c_int);
 		if (this->c_int <= 127 && this->c_int >= -128)
 		{

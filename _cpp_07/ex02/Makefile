@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/12/07 18:51:58 by abdait-m          #+#    #+#              #
-#    Updated: 2021/12/11 01:48:42 by abdait-m         ###   ########.fr        #
+#    Created: 2021/12/11 05:21:30 by abdait-m          #+#    #+#              #
+#    Updated: 2021/12/11 05:21:51 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = dynamic_cast
+NAME = array
 
-SRCS =  main.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = 
+HDR = Array.hpp
 
 CPP = clang++
 

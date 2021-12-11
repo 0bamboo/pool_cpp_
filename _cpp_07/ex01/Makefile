@@ -6,17 +6,17 @@
 #    By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/07 18:51:58 by abdait-m          #+#    #+#              #
-#    Updated: 2021/12/11 01:48:42 by abdait-m         ###   ########.fr        #
+#    Updated: 2021/12/11 05:06:27 by abdait-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = dynamic_cast
+NAME = iter
 
-SRCS =  main.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HDR = 
+HDR = iter.hpp
 
 CPP = clang++
 
