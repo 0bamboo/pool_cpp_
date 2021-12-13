@@ -14,11 +14,16 @@
 # define EASYFIND_HPP
 
 # include <iostream>
+# include <exception>
+# include <algorithm>
+# include <vector>
 
-template <typename T, int>
-void	easyfind(T& var, int i)
+template <typename T>
+void	easyfind(T& tab, int i)
 {
-	
+	if (std::find(tab.begin(), tab.end(), i) == tab.end())
+		throw std::runtime_error("Occurence not found !");
+	std::cout << "Occurence Found !" << std::endl;
 }
 
 #endif
