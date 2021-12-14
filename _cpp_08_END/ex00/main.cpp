@@ -6,7 +6,7 @@
 /*   By: abdait-m <abdait-m@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 11:00:50 by abdait-m          #+#    #+#             */
-/*   Updated: 2021/12/11 11:01:32 by abdait-m         ###   ########.fr       */
+/*   Updated: 2021/12/14 09:32:27 by abdait-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ int main()
 {
 	try
 	{
-		std::vector<int> vec;
-		for(size_t i = 0; i < 5; i++)
-			vec.push_back(i);
-		easyfind(vec, 0);
-		easyfind(vec, 1337);
+		std::vector<int> vect;
+		for(size_t i = 0; i < 10; i++)
+			vect.push_back(i);
+		vect.begin();
+		easyfind(vect, 0);
+		easyfind(vect, 1337);
 	}
-	catch(std::exception &e)
+	catch(std::exception &exc)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << exc.what() << std::endl;
 	}
 	return (0);
 }
